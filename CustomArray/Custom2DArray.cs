@@ -20,17 +20,17 @@ namespace CustomArray
         /// <summary>
         /// Gets the column count assigned in the constructor.
         /// </summary>
-        public uint ColumnCount { get; private set; }
+        public int ColumnCount { get; private set; }
         /// <summary>
         /// Gets the row count assigned in teh constructor.
         /// </summary>
-        public uint RowCount { get; private set; }
+        public int RowCount { get; private set; }
         /// <summary>
         /// Initializes a new <see cref="Custom2DArray{T}"/> instance.
         /// </summary>
         /// <param name="_rowCount"></param>
         /// <param name="_columnCount"></param>
-        public Custom2DArray(uint _rowCount, uint _columnCount)
+        public Custom2DArray(int _rowCount, int _columnCount)
         {
             RowCount = _rowCount;
             ColumnCount = _columnCount;
@@ -42,7 +42,7 @@ namespace CustomArray
         /// <param name="row">Row in array.</param>
         /// <param name="column">Column in array.</param>
         /// <param name="value">Value to be assigned.</param>
-        public void SetAt(uint row, uint column, T value)
+        public void SetAt(int row, int column, T value)
             => UnderlyingArray[row * ColumnCount + column] = value;
         /// <summary>
         /// Gets the <see cref="T"/> residing at the specified <paramref name="row"/> and <paramref name="column"/>.
@@ -50,7 +50,7 @@ namespace CustomArray
         /// <param name="row">The row to target.</param>
         /// <param name="column">The column to target.s</param>
         /// <returns></returns>
-        public T GetAt(uint row, uint column)
+        public T GetAt(int row, int column)
             => UnderlyingArray[row * ColumnCount + column];
     }
 }
